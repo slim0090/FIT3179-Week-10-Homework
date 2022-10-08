@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
+    "width": "container",
     "title": "Population Density (per km²), 2022 ",
     "data": {
       "url": "https://raw.githubusercontent.com/slim0090/FIT3179-Data-Visualisation-2/main/data/world_population.csv"
