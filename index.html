@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FIT3179 Week 10 Homework</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <style>
+  body *{
+	font-family: 'Open Sans', sans-serif;
+  }
+  
+  h1 {
+	font-weight: 900;
+  }
+  
+  body {
+	background-color: rgb(234, 229, 229);
+  }
+  
+  .page {
+	width: 1000px;
+	background-color: rgb(255, 255, 255);
+	margin: auto;
+	padding: 50px;
+	padding-top: 35px;
+  }
+  
+  .vis-container {
+	width: 100%;
+  }
+  
+  .vis2-container {
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  .description h2,
+  h1 {
+	margin-top: 0px;
+  }
+  
+  .description-right {
+	padding-left: 20px;
+  }
+  
+  .description-left {
+	padding-right: 20px;
+  }
+  
+  .pure-g {
+	margin-bottom: 40px;
+  }
+  
+  .small-font {
+	font-size: 14px;
+  }
+  </style>
+  
+
+
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>FIT3179 Week 10 Homework</h1>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Population Density (per km²)</h2>
+        <p>
+        Macau is the most densely populated country in the world (23,172.27 per km²) while the area is only 30 km².
+        </p>
+        <div id="vis1" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>World Population in 2022</h2>
+        <p>
+        China and India are the two countries with the largest population in the world (each country has more than 1.4 billion people).
+        </p>
+        
+        <div id="vis2" class="vis2-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var specVis1 = "https://raw.githubusercontent.com/slim0090/FIT3179-Week-10-Homework/main/population_density.vg.json";
+    var specVis2 = "https://raw.githubusercontent.com/slim0090/FIT3179-Week-10-Homework/main/world_population_choropleth_map.vg.json";
+
+    vegaEmbed('#vis1', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);;
+
+    vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</body>
+
+</html>
