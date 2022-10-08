@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Bubble Chart",
+    "data": {
+    "url": "https://raw.githubusercontent.com/slim0090/FIT3179-Data-Visualisation-2/main/data/world_population.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+        "x": {
+            "field": "Population",
+            "type": "quantitative",
+            "axis": {"tickCount": 7}
+        },
+        "y": {
+            "field": "Area",
+            "type": "quantitative",
+            "axis": {"tickCount": 6},
+            "title": "Area (km²)"
+        },
+        "color": {
+            "field": "Continent",
+            "type": "nominal"
+
+        },
+        "size": {
+            "field": "Density",
+            "type": "quantitative",
+            "title": "Density_(per km²)"
+        }
+    }
+}
