@@ -3,7 +3,7 @@
     "width": 800,
     "height": 600,
     "data": {
-      "url": "https://raw.githubusercontent.com/slim0090/FIT3179_Week9_Homework/main/data/world_population.csv"
+      "url": "https://raw.githubusercontent.com/slim0090/FIT3179-Data-Visualisation-2/main/data/world_population.csv"
     },
     "params": [
       {
